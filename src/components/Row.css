@@ -1,0 +1,94 @@
+.row {
+  margin: 3vw 0;
+  padding: 0;
+}
+
+.row-header-title {
+  font-size: 1.2vw;
+  line-height: 1.25vw;
+  font-weight: 700;
+  margin: 0 4% 0.5em;
+  min-width: 6em;
+  vertical-align: bottom;
+  color: #fff;
+}
+
+.slider {
+  transition: transform 0.54s cubic-bezier(0.5, 0, 0.1, 1) 0s;
+  margin: 0;
+  padding: 0 4%;
+  position: relative;
+}
+
+.slider__arrow {
+  background-clip: content-box;
+  box-sizing: border-box;
+  transition: 400ms all ease-in-out;
+  cursor: pointer;
+  width: 4%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.slider__arrow.left {
+  left: 0;
+}
+
+.slider__arrow.right {
+  right: 0;
+}
+
+.slider__arrow:hover {
+  background: rgba(20, 20, 20, 0.5);
+  transition: 400ms all ease-in-out;
+}
+
+.arrow {
+  transition: 400ms all ease-in-out;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 800;
+}
+.arrow:hover {
+  transition: 400ms all ease-in-out;
+  transform: scale(1.5);
+}
+.slider:hover .slider__arrow {
+  visibility: visible;
+}
+
+.slider__items {
+  display: flex;
+  scroll-behavior: smooth;
+  padding-bottom: 1px;
+}
+
+.slider_items::-webkit-scrollbar {
+  display: none;
+}
+
+.row__poster {
+  width: 16.2%;
+  display: inline-block;
+  padding: 0.2vw;
+  object-fit: contain;
+  border-radius: 0.4vw;
+  transition: transform 0.54s cubic-bezier(0.5, 0, 0.1, 1) 0s;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+.row__posterLarge {
+  max-height: 320px;
+}
+.row__posterLarge:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
