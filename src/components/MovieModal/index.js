@@ -33,7 +33,9 @@ export default function MovieModal({ id, setModalOpen }) {
             }}
           >
             <div className="img-fadeBottom"></div>
-            <span className="modal-title">{movie.title}</span>
+            <span className="modal-title">
+              {movie.title ? movie.title : ""}
+            </span>
             <button className="modal-button">
               <span className="play__icon">&#9654;</span>
               <span className="play__text">재생</span>
@@ -43,16 +45,15 @@ export default function MovieModal({ id, setModalOpen }) {
           <div className="modal-contents">
             <div className="modal-info">
               <span className="rating">
-                {movie.vote_average && movie.vote_average.toFixed(1)}
+                {movie.vote_average ? movie.vote_average.toFixed(1) : ""}
               </span>
               <span className="release-date">
                 {movie.release_date && getYear(movie.release_date)}
               </span>
               <span className="runtime">
                 {movie.runtime &&
-                  `${Math.floor(movie.runtime / 60)}시간 ${
-                    movie.runtime % 60
-                  }분`}
+                  `${Math.floor(movie.runtime / 60)}시간 ${movie.runtime %
+                    60}분`}
               </span>
               <span className="modal-tags">
                 {movie.genres &&
@@ -65,7 +66,9 @@ export default function MovieModal({ id, setModalOpen }) {
                     );
                   })}
               </span>
-              <p className="overview">{movie.overview}</p>
+              <p className="overview">
+                {movie.overview ? movie.overview : "준비중입니다."}
+              </p>
             </div>
           </div>
         </div>
