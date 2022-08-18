@@ -1,0 +1,145 @@
+.modal-container {
+  z-index: 1200;
+  position: absolute;
+}
+
+.modal {
+  position: relative;
+  max-width: 800px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  background: #111;
+  overflow-y: scroll;
+  border-radius: 8px;
+  transition: all 400ms ease-in-out 2s;
+  animation: fadeIn 400ms;
+}
+
+.modal-info {
+  padding: 0 4%;
+  margin-top: 1rem;
+}
+
+.detail-left {
+  width: 60%;
+}
+
+.detail-right {
+  width: 35%;
+  color: #fff;
+}
+.modal-info .rating,
+.modal-info .release-date,
+.modal-info .runtime,
+.modal-info .modal-tags {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  margin-right: 10px;
+}
+
+.modal-info .rating {
+  color: #46d369;
+  font-weight: 800;
+}
+
+.modal-info .overview {
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 1.5rem 0;
+}
+@media screen and (max-height: 768px) {
+  .wrapper-modal {
+    align-items: unset;
+    padding-top: 2rem;
+  }
+  .modal {
+    overflow-y: scroll;
+  }
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.modal {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.wrapper-modal {
+  position: fixed;
+  inset: 0px;
+  background-color: rgb(0 0 0 / 71%);
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.modal-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-size: cover;
+}
+
+.img-fadeBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(0, 0, 0, 0.61),
+    #111
+  );
+}
+
+.modal-title {
+  position: absolute;
+  font-weight: 700;
+  font-size: 2.5rem;
+  bottom: 6.5rem;
+  left: 4%;
+  color: white;
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  color: white;
+}
+
+.modal-button {
+  font-weight: 600;
+  position: absolute;
+  bottom: 2.5rem;
+  padding: 0.35rem 0;
+  width: 6rem;
+  left: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+.play__icon {
+  font-size: 1.5em;
+}
+
+.modal-tags {
+  line-height: 24px;
+}
