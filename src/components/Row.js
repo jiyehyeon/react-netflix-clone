@@ -14,8 +14,12 @@ export default function Row({ title, fetchUrl, isLargeRow, id }) {
   }, []);
 
   const fetchMovieData = async () => {
-    const request = await axios.get(fetchUrl);
-    setMovies(request.data.results);
+    await axios.get(fetchUrl).then((res) => {
+      const hasImage = res.data.results.filter(
+        (movie) => movie.backdrop_path != null
+      );
+      setMovies(hasImage);
+    });
   };
 
   const slideRight = (id) => {
