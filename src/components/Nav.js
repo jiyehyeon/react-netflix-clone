@@ -36,9 +36,9 @@ export default function Nav() {
         </svg>
       </span>
       <img
-        alt="User logged"
+        alt="User"
         className="nav__avatar"
-        src="/img/Netflix-avatar.png"
+        src={process.env.PUBLIC_URL + `/img/Netflix-avatar.png`}
       />
     </nav>
   );
