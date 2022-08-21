@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+## 📍 결과물
+![스크린샷 2022-08-18 오후 6.22.50.png](./screenshot.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[https://jiyehyeon.github.io/react-netflix-clone/](https://jiyehyeon.github.io/react-netflix-clone/)
 
-## Available Scripts
+## 📍 개발 과정
 
-In the project directory, you can run:
+<aside>
+TheMovieDB API 발급
+→ 헤더, 메인배너, 슬라이더, 모달 컴포넌트 생성
+→ axios로 API 호출하여 원하는 영화 정보 불러오기
+→ 각 컴포넌트에 `props`로 뿌려주기
 
-### `npm start`
+</aside>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📍 어려웠던 점 / 이슈
+슬라이더를 그리드에 맞게 칼같이 이동하도록 구현하는 데 시간이 오래 걸렸다.
+`State`를 사용하지 않고 CSS로만 구현하려고 하니까 목록이 다 끝났는데 검은 화면이 노출되버리기도 하고 이미지가 시작 부분과 일치하지 않고 어정쩡하게 걸쳐지기도 했다.
+결국 `State`를 사용해서 첫번째 위치에 올 영화의 `index`값을 조절해주어 해결할 수 있었다.
+CSS `transform`의 `translateX` 를 사용해서 슬라이드 아이템의 `offsetwidth` * `이동할 index 갯수` 만큼 이동해주었더니 이상 없이 잘 작동했다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+❗ ‘다큐멘터리 영화' 부분이 새로고침 할 때마다 세로사이즈 혹은 정방향사이즈로 나타나는데 CSS나 컴포넌트 호출한 부분은 다른 행과 차이가 없어서 이유가 뭔지 모르겠다..
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📍 아쉬운 점
+기능 구현보단 UI 구현의 비중이 많았던 것 같아서 추가로 라우터, 검색, 프로필 등도 구현해보고 싶다.
