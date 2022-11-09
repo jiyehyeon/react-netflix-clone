@@ -1,7 +1,6 @@
 ## 📍 결과물
 
 ![](./screen-shot.png)
-[바로가기](https://jiyehyeon.github.io/react-netflix-clone/)
 
 ## 📍 개발 과정
 
